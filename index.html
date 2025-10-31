@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>G Putnam Music MOODs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/styles/global.css" rel="stylesheet">
+  <style>
+    :root {
+      --amber-50: #fff8ea;
+      --amber-200: #fbe8b6;
+      --amber-400: #fac860;
+      --amber-800: #b2843f;
+      --amber-900: #7b531d;
+      --amber-950: #513713;
+      --serif: 'Georgia', serif;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: linear-gradient(120deg, var(--amber-50) 0%, var(--amber-200) 57%, var(--amber-400) 100%);
+      color: var(--amber-950);
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2em;
+      padding: 32px 44px 0 0;
+      background: transparent;
+    }
+    .menu {
+      display: flex;
+      gap: 2.5em;
+      font-weight: 600;
+      font-size: 1.07em;
+    }
+    .menu a {
+      color: var(--amber-900);
+      text-decoration: none;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border .2s;
+    }
+    .menu a:hover {
+      border-color: var(--amber-800);
+    }
+    .main-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 48px;
+      max-width: 1100px;
+      margin: 56px auto 0 auto;
+      padding: 0 32px;
+    }
+    .main-left {
+      flex: 1 1 0%;
+      max-width: 540px;
+      margin-top: 16px;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: 2.8em;
+      font-weight: bold;
+      color: var(--amber-900);
+      margin-bottom: 0.45em;
+      margin-top: 0;
+    }
+    .subtitle {
+      font-size: 2.1em;
+      font-family: var(--serif);
+      font-weight: 600;
+      color: var(--amber-950);
+      margin-bottom: 0.38em;
+    }
+    .desc {
+      font-size: 1.09em;
+      color: var(--amber-950);
+      margin-bottom: 1.2em;
+    }
+    .input-label {
+      font-size: 1.1em;
+      font-weight: 700;
+      margin: 26px 0 8px 0;
+    }
+    .input-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .input-group input {
+      border-radius: 9px;
+      border: 1.5px solid var(--amber-200);
+      padding: 15px 18px;
+      font-size: 1.17em;
+      width: 320px;
+      max-width: 90vw;
+      box-shadow: 0 1px 8px #b2965b33;
+    }
+    .input-group button {
+      background: var(--amber-800);
+      color: var(--amber-50);
+      font-weight: 700;
+      border: none;
+      border-radius: 9px;
+      padding: 16px 28px;
+      font-size: 1.15em;
+      cursor: pointer;
+      box-shadow: 0 2px 16px var(--amber-200);
+      transition: background .16s;
+    }
+    .input-group button:hover {
+      background: var(--amber-900);
+    }
+    .main-right {
+      flex: 0 0 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 8px 44px #b78b488f;
+      overflow: hidden;
+    }
+    .main-right img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+    .playlist-section {
+      max-width:1000px;
+      margin:38px auto 0;
+      padding:0 18px;
+      text-align: left;
+    }
+    .playlist-title {
+      font-family: var(--serif);
+      color: var(--amber-900);
+      font-size: 2.2em;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .playlist-desc {
+      font-size: 1.08em;
+      color: var(--amber-950);
+      margin-bottom: 0;
+    }
+    #bot-intro {
+      margin: 0 0 18px 0;
+      font-weight: 600;
+      color: var(--amber-800);
+      font-size: 1.12em;
+    }
+    @media (max-width: 950px) {
+      .main-container { flex-direction: column; gap: 32px; align-items:center; }
+      .main-right { margin-top:32px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="menu">
+    <a href="#discover">Discover</a>
+    <a href="#moods">Moods</a>
+    <a href="#about">About</a>
+    <a href="#epk">EPK</a>
+    <a href="#contact">Contact</a>
+    <a href="https://supabase.com/docs" target="_blank" rel="noopener">MIP</a>
+  </nav>
+</header>
+<div class="main-container">
+  <section class="main-left">
+    <h1>G Putnam Music MOODs</h1>
+    <div class="subtitle">MOODs</div>
+    <p class="desc">Discover the revolutionary approach to music streaming that matches your exact mood. Our innovative SB platform finds the perfect tracks for every moment of your life.</p>
+    <div id="bot-intro"></div>
+    <div class="input-label">Find Your Perfect Mood</div>
+    <form class="input-group" action="#">
+      <input type="text" placeholder="Enter one or two moods (e.g., relaxing, energetic)..." id="moodInput" />
+      <button type="submit">Start Listening</button>
+    </form>
+  </section>
+  <aside class="main-right">
+    <img src="IMG_8311.jpeg" alt="G Putnam Portrait" />
+  </aside>
+</div>
+<section class="playlist-section">
+  <div class="playlist-title">Explore the GPM Playlist</div>
+  <p class="playlist-desc">
+    Dive into our ever-growing library of over 1,000 tracks. While this embedded playlist gives you a taste, use our MOODs search above for an enhanced experience with our full metadata!
+  </p>
+  <!-- Stripe payment or subscription can be inserted here -->
+  <button id="subscribeBtn">Subscribe Now</button>
+</section>
+
+<!-- MC BOT AI, Supabase, Stripe, and business-intro automation scripts -->
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+const SB = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_ANON_KEY');
+
+// MC BOT Mood Search Handler
+const form = document.querySelector('.input-group');
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const mood = form.querySelector('input').value.trim();
+  if (!mood) return;
+  const { data, error } = await SB.rpc('mc_bot', { mood });
+  if (data && data.intro) {
+    document.getElementById('bot-intro').textContent = data.intro;
+  }
+  // You can add custom mood-based playlist injection here
+});
+
+// Fetch and display persistent business intro script
+fetch('https://your-dropbox-link.com/bot-intro.txt')
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById('bot-intro').textContent = text;
+  });
+
+// Stripe Subscription Handler (replace endpoint and PUB key with yours)
+document.getElementById('subscribeBtn').onclick = async function() {
+  const stripe = Stripe('YOUR_STRIPE_PUBLIC_KEY');
+  const { sessionId } = await fetch('/create-checkout-session').then(r => r.json());
+  stripe.redirectToCheckout({ sessionId });
+};
+</script>
+<script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>
