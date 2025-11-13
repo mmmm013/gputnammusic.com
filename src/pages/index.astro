@@ -1,1 +1,74 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Fluid Host for Win32"/><title>Loop Component</title><script defer="defer" src="./static/js/main.bff95014.js"></script><link href="./static/css/main.c47195de.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="animatedSplashScreen" hidden></div><div id="fluidElement"></div></body></html>
+---
+// Astro component for gputnammusic.com homepage
+const pageTitle = "GPU Putnam Music";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Welcome to GPU Putnam Music - Your music streaming platform" />
+		<title>{pageTitle}</title>
+		<style>
+			body {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				margin: 0;
+				padding: 0;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.container {
+				text-align: center;
+				color: white;
+				padding: 40px;
+			}
+			h1 {
+				font-size: 3.5rem;
+				margin-bottom: 20px;
+				text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+			}
+			p {
+				font-size: 1.3rem;
+				margin-bottom: 30px;
+				opacity: 0.95;
+			}
+			.domains {
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-top: 40px;
+			}
+			.domain-link {
+				display: inline-block;
+				padding: 12px 30px;
+				background: rgba(255, 255, 255, 0.2);
+				border: 2px solid white;
+				border-radius: 25px;
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				transition: all 0.3s ease;
+			}
+			.domain-link:hover {
+				background: white;
+				color: #667eea;
+				transform: translateY(-2px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>🎵 {pageTitle}</h1>
+			<p>Premium Music Streaming Platform</p>
+			<p>Experience your music your way across our affiliated platforms:</p>
+			<div class="domains">
+				<a href="https://itskleigh.com" class="domain-link">KLEIGH Artist Portal</a>
+				<a href="https://thesingalongs.com" class="domain-link">The Sing-Alongs</a>
+			</div>
+		</div>
+	</body>
+</html>
