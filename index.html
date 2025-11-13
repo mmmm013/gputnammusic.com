@@ -1,90 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Maykers — Control Center</title>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="/assets/index-5f3e2af4.css">
-    <style>
-      body { font-family: system-ui, sans-serif; background: #f8f8f8; margin: 0; color: #222; }
-      header, footer { background: #222; color: #eee; text-align: center; padding: 1em 0; }
-      nav { margin: 1em 0; text-align: center; }
-      nav a { margin: 0 1em; color: #23B257; text-decoration: none; font-weight: bold; }
-      nav a:hover { text-decoration: underline; }
-      .container { max-width: 600px; margin: 2em auto; background: #fff; border-radius: 12px; padding: 2em; box-shadow: 0 2px 12px #0001; }
-      .card { padding: 1em; background: #eee; border-radius: 10px; margin-bottom: 2em; }
-      section h2 { margin-top: 0; }
-      address, .contact { margin-top: 1.5em; }
-      small { color: #888; }
-      .stripe-form button { background: #6772e5; color: #fff; font-size: 1em; border: none; border-radius: 4px; padding: 0.6em 1.5em; cursor: pointer; }
-    </style>
-    <!-- Stripe.js for Checkout/Elements integration -->
-    <script src="https://js.stripe.com/v3/"></script>
-    <!-- Supabase CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.43.6/dist/umd/supabase.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Music Maykers, LLC</h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="#listen">Listen</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-    <main class="container">
-      <h2>Music Maykers — Control Center</h2>
-      <p>Official site is deploying. This is a temporary live page so partners can reach us while we finalize the build.</p>
-      <a href="#listen">Jump to Listen</a>
-
-      <section id="listen" class="card">
-        <h2>Listen</h2>
-        <iframe
-          id="disco-playlist-23705238"
-          name="disco-playlist-23705238"
-          allowfullscreen
-          frameborder="0"
-          class="disco-embed"
-          src="https://s.disco.ac/e/9/23705238?download=true&us=WJFlCzUalW1ZFFwGCU0M5pJE3AHTYfix&autowork=true&color=%2323B257C&theme=white"
-          width="480"
-          height="395">
-        </iframe>
-      </section>
-
-      <section class="card">
-        <h2>Buy / Contribute</h2>
-        <!-- Stripe Checkout Example Button (replace with your real Stripe product/price or custom logic) -->
-        <form id="stripe-form" class="stripe-form">
-          <button type="button" onclick="startStripeCheckout()">Support with Stripe</button>
-        </form>
-        <!-- Placeholder for other payment/integration buttons -->
-      </section>
-
-      <section class="card">
-        <h2>Member Login / Access</h2>
-        <form id="login-form">
-          <input type="email" id="email" placeholder="Your email" required>
-          <input type="password" id="password" placeholder="Password" required>
-          <button type="submit">Login (Supabase)</button>
-        </form>
-        <div id="login-result"></div>
-      </section>
-
-      <section id="contact" class="card contact">
-        <h2>Contact</h2>
-        <div>
-          Email: <a href="mailto:contact@musicmaykers.net">contact@musicmaykers.net</a>
-        </div>
-        <div>&copy; 2025 Music Maykers, LLC</div>
-        <small>Secure &bull; HTTPS enabled</small>
-      </section>
-    </main>
-    <footer>
-      &copy; 2025 Music Maykers, LLC
-    </footer>
-    <script src="/assets/index-4a569784.js"></script>
-    <script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G Putnam Music — Control Center</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/assets/index-5f3e2af4.css">
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f8f8f8; margin: 0; color: #222; }
+    header, footer { background: #222; color: #eee; text-align: center; padding: 1em 0; }
+    nav { margin: 1em 0; text-align: center; }
+    nav a { margin: 0 1em; color: #23B257; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 600px; margin: 2em auto; background: #fff; border-radius: 12px; padding: 2em; box-shadow: 0 2px 12px #0001; }
+    .card { padding: 1em; background: #eee; border-radius: 10px; margin-bottom: 2em; }
+    section h2 { margin-top: 0; }
+    address, .contact { margin-top: 1.5em; }
+    small { color: #888; }
+    .stripe-form button { background: #6772e5; color: #fff; font-size: 1em; border: none; border-radius: 4px; padding: 0.6em 1.5em; cursor: pointer; }
+  </style>
+  <!-- Stripe.js for Checkout/Elements integration -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.43.6/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>G Putnam Music</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#listen">Listen</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h2>G Putnam Music — Control Center</h2>
+    <p>Official site is deploying. This is a temporary live page so partners can reach us while we finalize the build.</p>
+    <a href="#listen">Jump to Listen</a>
+    <section id="listen" class="card">
+      <h2>Listen</h2>
+      <iframe
+        id="disco-playlist-23705238"
+        name="disco-playlist-23705238"
+        allowfullscreen
+        frameborder="0"
+        class="disco-embed"
+        src="https://s.disco.ac/e/9/23705238?download=true&us=WJFlCzUalW1ZFFwGCU0M5pJE3AHTYfix&autowork=true&color=%2323B257C&theme=white"
+        width="480"
+        height="395">
+      </iframe>
+    </section>
+    <section class="card">
+      <h2>Buy / Contribute</h2>
+      <!-- Stripe Checkout Example Button (replace with your real Stripe product/price or custom logic) -->
+      <form id="stripe-form" class="stripe-form">
+        <button type="button" onclick="startStripeCheckout()">Support with Stripe</button>
+      </form>
+      <!-- Placeholder for other payment/integration buttons -->
+    </section>
+    <section class="card">
+      <h2>Member Login / Access</h2>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Your email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login (Supabase)</button>
+      </form>
+      <div id="login-result"></div>
+    </section>
+    <section id="contact" class="card contact">
+      <h2>Contact</h2>
+      <div>
+        Email: <a href="mailto:contact@gpmusic.net">contact@gpmusic.net</a>
+      </div>
+      <div>© 2025 G Putnam Music</div>
+      <small>Secure • HTTPS enabled</small>
+    </section>
+  </main>
+  <footer>
+    © 2025 G Putnam Music
+  </footer>
+  <script src="/assets/index-4a569784.js"></script>
+  <script>
     // ------------ STRIPE BUTTON LOGIC -------------
     // Replace below with your real Stripe key in production
     const stripePublicKey = 'pk_test_XXXXXXXXXXXXXXXXXXXXXXXX'; // TEST KEY ONLY
@@ -99,13 +95,11 @@
         if (result.error) alert(result.error.message);
       });
     }
-
     // ------------ SUPABASE LOGIN LOGIC ------------
     // Replace below with your real Supabase project URL and anon key!
     const sbUrl = 'https://yourproject.supabase.co';
     const sbAnon = 'your-anon-public-key';
     const supabase = window.supabase.createClient(sbUrl, sbAnon);
-
     document.getElementById('login-form').onsubmit = async function(event) {
       event.preventDefault();
       const email = document.getElementById('email').value;
@@ -118,6 +112,6 @@
         document.getElementById('login-result').innerHTML = 'Login successful! Welcome.';
       }
     };
-    </script>
-  </body>
+  </script>
+</body>
 </html>
