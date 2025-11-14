@@ -1,103 +1,144 @@
+
 <!doctype html>
 <html lang="en">
-<head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>G Putnam Music — Control Center</title>
- <link rel="stylesheet" href="/assets/index-5f3e2af4.css">
- <style>
-  body { font-family: system-ui, sans-serif; background: #f8f8f8; margin: 0; color: #222; }
-  header { background: #222; color: #fff; padding: 1em; text-align: center; }
-  nav { margin: 1em 0; text-align: center; }
-  nav a { display: inline-block; margin: 0 1.5em; color: #222; text-decoration: none; font-weight: 600; }
-  nav a:hover { text-decoration: underline; }
-  .container { max-width: 680px; margin: 2em auto; background: #fff; border-radius: 12px; padding: 2em; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-  h1 { margin-bottom: 0.5em; }
-  p { line-height: 1.6; margin-bottom: 1.5em; }
-  section { margin: 2em 0; padding: 1.5em 0; border-top: 1px solid #eee; }
-  section h2 { margin-bottom: 1em; color: #333; }
-  input { width: 100%; padding: 0.8em; margin: 0.5em 0; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; }
-  button { padding: 0.8em 1.5em; margin: 0.5em 0; border: none; border-radius: 6px; background: #222; color: white; cursor: pointer; font-weight: 600; }
-  button:hover { background: #444; }
-  .card { padding: 1em; background: #f5f5f5; border-radius: 8px; margin: 1em 0; }
-  iframe { width: 100%; border: none; }
-  footer { text-align: center; padding: 2em; background: #f0f0f0; margin-top: 2em; font-size: 0.9em; color: #666; }
-  .contact-info { margin: 1em 0; }
-  a { color: #0066cc; }
- </style>
-</head>
-<body>
- <header>
-  <h1>G Putnam Music</h1>
- </header>
- <nav>
-  <a href="#">Home</a>
-  <a href="#listen">Listen</a>
-  <a href="#contact">Contact</a>
- </nav>
- <main class="container">
-  <h2>G Putnam Music — Control Center</h2>
-  <p>Official site is deploying. This is a temporary live page so partners can reach us while we...</p>
-  <section id="listen" class="card">
-   <h2>Listen</h2>
-   <p>Experience music on our platform:</p>
-   <iframe src="https://open.spotify.com/embed/playlist/2370523807?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>
-  <section class="card">
-   <h2>Buy / Contribute</h2>
-   <p>Support the platform with Stripe integration:</p>
-   <form id="stripe-form" class="stripe-form">
-    <button type="button" onclick="startStripeCheckout()">Support with Stripe</button>
-   </form>
-  </section>
-  <section id="contact" class="card">
-   <h2>Member Login / Access</h2>
-   <form id="login-form">
-    <input type="email" id="email" placeholder="Your email" required />
-    <input type="password" id="password" placeholder="Password" required />
-    <button type="submit">Login (Supabase)</button>
-   </form>
-   <div id="login-result"></div>
-  </section>
-  <section class="card contact-info">
-   <h2>Contact</h2>
-   <p>Email: <a href="mailto:contact@gpmusic.net">contact@gpmusic.net</a></p>
-   <p>©2025 G Putnam Music</p>
-   <p><small>Secure • HTTPS enabled</small></p>
-  </section>
- </main>
- <footer>
-  © 2025 G Putnam Music
- </footer>
- <script>
-  const stripePublicKey = 'pk_test_XXXXXXXXXXXXXXXXXXXXXXXX';
-  function startStripeCheckout() {
-    const stripe = Stripe(stripePublicKey);
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_XXXXXXXXXXXXXXXX', quantity: 1}],
-      mode: 'payment',
-      successUrl: window.location.href + '?success=true',
-      cancelUrl: window.location.href + '?canceled=true',
-    }).then(function(result) {
-      if (result.error) alert(result.error.message);
-    });
-  }
-  const suUrl = 'https://yourproject.supabase.co';
-  const suAnonKey = 'your-anon-public-key';
-  const supabase = window.supabase.createClient(suUrl, suAnonKey);
-  document.getElementById('login-form').onsubmit = async function(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) {
-      document.getElementById('login-result').innerHTML = '<span style="color:red;">Login failed: ' + error.message + '</span>';
-    } else {
-      document.getElementById('login-result').innerHTML = '<span style="color:green;">Login successful! Welcome.</span>';
-    }
-  };
- </script>
- <script defer src="https://js.stripe.com/v3/"></script>
- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.43.6/dist/umd/supabase.min.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="generator" content="Hostinger Horizons" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hostinger Horizons</title>
+		<script type="module" crossorigin src="/assets/index-4a569784.js"></script>
+		<link rel="stylesheet" href="/assets/index-5f3e2af4.css">
+		<script type="module">
+window.onerror = (message, source, lineno, colno, errorObj) => {
+	const errorDetails = errorObj ? JSON.stringify({
+		name: errorObj.name,
+		message: errorObj.message,
+		stack: errorObj.stack,
+		source,
+		lineno,
+		colno,
+	}) : null;
+
+	window.parent.postMessage({
+		type: 'horizons-runtime-error',
+		message,
+		error: errorDetails
+	}, '*');
+};
+</script>
+		<script type="module">
+const observer = new MutationObserver((mutations) => {
+	for (const mutation of mutations) {
+		for (const addedNode of mutation.addedNodes) {
+			if (
+				addedNode.nodeType === Node.ELEMENT_NODE &&
+				(
+					addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
+					addedNode.classList?.contains('backdrop')
+				)
+			) {
+				handleViteOverlay(addedNode);
+			}
+		}
+	}
+});
+
+observer.observe(document.documentElement, {
+	childList: true,
+	subtree: true
+});
+
+function handleViteOverlay(node) {
+	if (!node.shadowRoot) {
+		return;
+	}
+
+	const backdrop = node.shadowRoot.querySelector('.backdrop');
+
+	if (backdrop) {
+		const overlayHtml = backdrop.outerHTML;
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(overlayHtml, 'text/html');
+		const messageBodyElement = doc.querySelector('.message-body');
+		const fileElement = doc.querySelector('.file');
+		const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
+		const fileText = fileElement ? fileElement.textContent.trim() : '';
+		const error = messageText + (fileText ? ' File:' + fileText : '');
+
+		window.parent.postMessage({
+			type: 'horizons-vite-error',
+			error,
+		}, '*');
+	}
+}
+</script>
+		<script type="module">
+const originalConsoleError = console.error;
+console.error = function(...args) {
+	originalConsoleError.apply(console, args);
+
+	let errorString = '';
+
+	for (let i = 0; i < args.length; i++) {
+		const arg = args[i];
+		if (arg instanceof Error) {
+			errorString = arg.stack || `${arg.name}: ${arg.message}`;
+			break;
+		}
+	}
+
+	if (!errorString) {
+		errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ');
+	}
+
+	window.parent.postMessage({
+		type: 'horizons-console-error',
+		error: errorString
+	}, '*');
+};
+</script>
+		<script type="module">
+const originalFetch = window.fetch;
+
+window.fetch = function(...args) {
+	const url = args[0] instanceof Request ? args[0].url : args[0];
+
+	// Skip WebSocket URLs
+	if (url.startsWith('ws:') || url.startsWith('wss:')) {
+		return originalFetch.apply(this, args);
+	}
+
+	return originalFetch.apply(this, args)
+		.then(async response => {
+			const contentType = response.headers.get('Content-Type') || '';
+
+			// Exclude HTML document responses
+			const isDocumentResponse =
+				contentType.includes('text/html') ||
+				contentType.includes('application/xhtml+xml');
+
+			if (!response.ok && !isDocumentResponse) {
+					const responseClone = response.clone();
+					const errorFromRes = await responseClone.text();
+					const requestUrl = response.url;
+					console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
+			}
+
+			return response;
+		})
+		.catch(error => {
+			if (!url.match(/.html?$/i)) {
+				console.error(error);
+			}
+
+			throw error;
+		});
+};
+</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		
+	</body>
 </html>
